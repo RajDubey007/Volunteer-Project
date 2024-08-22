@@ -1,0 +1,228 @@
+<!-- component -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <style>
+      body{
+        background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%); 
+      }
+      .box{
+        background: linear-gradient(112.1deg, rgb(3, 151, 232) 27.1%, rgb(47, 31, 116) 80.7%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- component -->
+    <!-- format the code its messy  -->
+
+    <div class=" ">
+      <!-- {/* top container with tagline and backgroundImage  */} -->
+      <div class="relative bg-center">
+        <!-- {/* image section  */} -->
+        <section
+          class="w-full h-[40vh] lg:h-[55vh] bg-cover bg-center brightness-50 bg-center bg-cover"
+          style="
+            background-image: url('../90183803_SL-091823-63290-20.jpg');
+            width: 100%;
+          "
+        ></section>
+
+        <!-- {/* tagline division  */} -->
+        <div
+          class="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 text-white"
+        >
+          <h1 class="text-3xl md:text-5xl font-bold text-center">Volunteer Registration</h1>
+        </div>
+      </div>
+
+      <!-- {/* bottom relative container  */} -->
+      <div class="w-full  lg:h-[130vh] relative">
+        <!-- {/* division with floating form  */} -->
+        <div
+          class="absolute -top-[3%] md:-top-[10%] left-1/2 -translate-x-1/2 md:grid-cols-3 h-fit w-3/5 md:w-[90%] rounded overflow-hidden text-white"
+        >
+          <!-- {/* form / left div  */} -->
+          <div
+            class="p-2 md:p-4 h-full box col-span-2 w-12/12 mb-[150px] rounded-xl"
+          >
+            <form action="/vlntForm" method="post">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-8 py-6 px-4 md:py-12 md:px-8 text-sm"
+              >
+                <!-- {/* name input  */} -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-semibold">
+                    Name <span class="text-red-500">&#42;</span>
+                  </label>
+                  <input
+                    class="border-[1px] border-white bg-black p-2 rounded-md"
+                    placeholder="Enter Your Name"
+                    required
+                    name="name"
+                    type="text"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <label class="font-semibold">
+                    Email <span class="text-red-500">&#42;</span>
+                  </label>
+                  <input
+                    class="border-[1px] border-white bg-black p-2 rounded-md"
+                    placeholder="Enter Your Email"
+                    required
+                    name="email"
+                    type="email"
+                  />
+                </div>
+
+                <!-- {/* phone number input  */} -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-semibold">
+                    Skills <span class="text-red-500">&#42;</span>
+                  </label>
+                  <input
+                    class="border-[1px] border-white bg-black p-2 rounded-md"
+                    placeholder="Enter Your Phone Number"
+                    required
+                    name="phone"
+                    type="tel"
+                  />
+                </div>
+
+                <!-- {/* subject input  */} -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-semibold">
+                    subject <span class="text-red-500">&#42;</span>
+                  </label>
+                  <input
+                    class="border-[1px] border-white bg-black p-2 rounded-md"
+                    placeholder="Enter Your Subject"
+                    required
+                    name="subject"
+                    type="text"
+                  />
+                </div>
+
+                <!-- {/* message input  */} -->
+                <div class="flex flex-col gap-1 md:col-span-2">
+                  <label class="font-semibold">
+                    Message <span class="text-red-500">&#42;</span>
+                  </label>
+                  <input
+                    class="border-[1px] border-white bg-black p-2 rounded-md"
+                    placeholder="Enter Your Message"
+                    required
+                    name="msg"
+                    type="text"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="py-2 px-2 w-[160px] md:py-4 md:px-6 bg-black rounded-md border-2 border-white flex items-center gap-2 hover:scale-95 transition-all"
+                >
+                  <span class="text-xl">Submit</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- {/* submit button div  */} -->
+            <div
+              class="flex items-center justify-center md:justify-end py-4 px-8"
+            >
+              <!-- {/* submit button  */} -->
+            </div>
+          </div>
+
+          <!-- {/* right div  */} -->
+          <div
+            class="py-5 px-4 h-[500px] md:h-full grid grid-cols-1 grid-rows-5 w-12/12"
+          >
+            <h2
+              class="text-xl lg:text-2xl text-center md:text-start font-semibold"
+            >
+              Volunteer Information
+            </h2>
+
+            <table class="bg-black">
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr>
+                  <th scope="col" class="px-6 py-3">Name</th>
+                  <th scope="col" class="px-6 py-3">Email</th>
+                  <th scope="col" class="px-6 py-3">Phone</th>
+                  <th scope="col" class="px-6 py-3">Subject</th>
+                  <th scope="col" class="px-6 py-3">Message</th>
+                  <th scope="col" class="px-6 py-3">Edit</th>
+                  <th scope="col" class="px-6 py-3">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% localStorage.forEach((user)=>{ %>
+
+                <tr
+                  class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-black border-b dark:border-gray-700"
+                >
+                  <td class="px-6 py-4 text-black  uppercase"><%= user.name %></td>
+                  <td class="px-6 py-4 text-black "><%= user.email %></td>
+                  <td class="px-6 py-4 text-black  uppercase"><%= user.phone %></td>
+                  <td class="px-6 py-4 text-black  uppercase"><%= user.subject %></td>
+                  <td class="px-6 py-4 text-black  uppercase"><%= user.msg %></td>
+                  <td class="px-6 py-4 text-black  uppercase">
+                    <a href="/editPage/<%= user.id %>">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td class="px-6 py-4 uppercase">
+                    <a href="/deleteUser/<%= user.id %>">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="black"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+
+                <% })%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

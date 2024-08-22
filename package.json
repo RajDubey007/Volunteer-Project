@@ -1,0 +1,16 @@
+{
+  "name": "volunteer",
+  "version": "1.0.0",
+  "description": "Volunteer Registration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Raj Dubey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
